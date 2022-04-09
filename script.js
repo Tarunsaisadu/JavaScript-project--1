@@ -1,40 +1,83 @@
-let computerPlay =()=>{
-
- let arr=["rock", "paper", "scissor"]
-
-  let result= arr[Math.floor(Math.random() * arr.length)];
-    return result;
-};
+let playerCount=0;
+let computerScore=0;
 
 
-
-let playRound = (playerSelection, computerSelection) =>{
-
-    playerSelection = prompt("Choose from any 3").toLowerCase();
-    computerSelection= computerPlay()
-    
+function chooseRock(playerSelection,computerSelection){
+    playerSelection==="rock";
+    computerSelection=computerPlay();
     if(playerSelection===computerSelection){
-        alert("game is draw")
+        
+        tempwinner.innerHTML="Game is Draw"
     }
-    else if(playerSelection==="rock" && computerSelection==="paper"){
-        alert("computer beats computer")
+    else if(computerSelection==="paper"){
+        tempwinner.innerHTML="paper wins";
+       computerscore.innerHTML= `${computerScore++}`
     }
-    else if(playerSelection==="paper" && computerSelection==="rock"){
-        alert("player beats computer")
+    else if(computerSelection==="scissors"){
+        tempwinner.innerHTML="rock wins"
+       playerScore.innerHTML= `${playerCount++}`
     }
-    else if(playerSelection==="scissors" && computerSelection==="rock"){
-        alert("computer beats player")
-    }
-    else if(playerSelection==="rock" && computerSelection==="scissors"){
-        alert("player beats computer")
-    }
-    else if(playerSelection==="paper" && computerSelection==="scissors"){
-        alert("computer beats player")
-    }
-    else if(playerSelection==="scissors" && computerSelection==="paper"){
-        alert("player beats computer")
-    }
+console.log(computerSelection)
 }
 
-playRound()
+function choosePaper(playerSelection,computerSelection){
+    playerSelection==="paper";
+    computerSelection=computerPlay();
+    if(playerSelection===computerSelection){
+        
+        tempwinner.innerHTML="Game is Draw"
+    }
+    else if(computerSelection==="rock"){
+        tempwinner.innerHTML="paper wins"
+        computerscore.innerHTML=`${computerScore++}`
+    }
+    else if(computerSelection==="scissors"){
+        tempwinner.innerHTML="scissors wins"
+        playerScore.innerHTML=`${playerCount++}`
+    }
+    console.log(computerSelection)
+}
+function chooseScissors(playerSelection,computerSelection){
+
+    playerSelection==="scissors";
+    computerSelection=computerPlay();
+    if(playerSelection===computerSelection){
+        
+        tempwinner.innerHTML="Game is Draw"
+    }
+    else if(computerSelection==="rock"){
+        tempwinner.innerHTML="rock wins"
+        computerscore.innerHTML=`${computerScore++}`
+    }
+    else if(computerSelection==="paper"){
+        tempwinner.innerHTML="scissors wins"
+        playerScore.innerHTML=`${playerCount++}`
+    }
+    console.log(computerSelection)
+}
+
+
+document.getElementById("rock").addEventListener("click",chooseRock)
+document.getElementById("paper").addEventListener("click",choosePaper)
+document.getElementById("scissor").addEventListener("click",chooseScissors)
+
+let tempwinner=document.getElementById("temp-winner");
+let playerScore=document.getElementsByClassName("player-score");
+let computerscore=document.getElementsByClassName("computer-score");
+
+
+
+
+
+function computerPlay() {
+
+    let arr = ["rock", "paper", "scissor"];
+
+    let result = arr[Math.floor(Math.random() * arr.length)];
+    return result;
+}
+
+
+
+
 

@@ -1,0 +1,72 @@
+body{
+
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/school-classroom-interior-with-desk-and-board-lesson-empty-university-room-cartoon-free-vector.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text-input-heading{
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20px;
+color: yellow;
+
+}
+
+.text-input{
+    background-color: transparent;
+    color: yellow;
+    width: 160px;
+    height: 30px;
+    border: 2px solid white;
+    font-size: large;
+}
+
+.side-content{
+    text-align: right;
+    color: yellow;
+    margin-right: 30px;
+}
+.center-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.slect-opion-text{
+    color: yellow;
+}
+
+
+#rock,#paper,#scissor{
+    font-size: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid rgb(37, 122, 42);
+    cursor: pointer;
+    background-color: transparent;
+}
+#rock:hover,#paper:hover,#scissor:hover{
+    background-color: rgb(50, 77, 44);
+
+}
+
+.temp-winner-div{
+    text-align: center;
+    color: yellow;
+}
+
+
+
+.bottom-content{
+    text-align: center; 
+    margin-top: 150px;
+    color: yellow;
+}
