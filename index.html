@@ -5,12 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    <script src="script.js"></script>
+
 </head>
 
 <body>
 
+    <div class="hero-content">
+        <h2 class="text-input-heading"> ENTER PLAYER NAME</h2>
+        <input type="text" class="text-input">
+    </div>
+    <div class="side-content">
+        <h2 class="player-score"></h2>
+        <h2 class="computer-score"></h2>
+    </div>
+    <div class="center-content">
+        <h2 class="slect-opion-text">Select Any One Object</h2>
+        <button id="rock"><span>💎</span></button>
+        <button id="paper"><span>📄</span></button>
+        <button id="scissor"><span>✂️</span></button>
+    </div>
+    <div class="temp-winner-div">
+        <h3 id="temp-winner"></h3>
+    </div>
+    <div class="bottom-content">
+        <h2 class="final-winner-text">Final Winner:<span>Somebody</span></h2>
+    </div>
+
 </body>
+<script src="script.js"></script>
 
 </html>
